@@ -7,9 +7,7 @@ const { ethers } = require("hardhat");
 describe("Halas contract", () => {
   const deployedContract = async () => {
     const [owner, address1, address2] = await ethers.getSigners();
-
     const halas = await ethers.deployContract("Halas");
-
     return { halas, owner, address1, address2 };
   };
 
